@@ -21,8 +21,6 @@ services:
       dockerfile: ./docker/rails/development/Dockerfile
     stdin_open: true
     tty: true
-    depends_on:
-      - db
     ports:
       - "3000:3000"
     volumes_from:
