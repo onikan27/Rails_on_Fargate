@@ -4,10 +4,7 @@ worker_processes 1
 
 working_directory app_path
 
-
-if ENV['RAILS_ENV'] == 'production'
-  listen 3000
-end
+listen 3000
 
 pid "#{app_path}/tmp/pids/unicorn.pid"
 
