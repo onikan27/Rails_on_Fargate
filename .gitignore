@@ -27,3 +27,4 @@
 /config/master.key
 /docker/mysql/volumes/*
 /.env*
+/rails_ecs.env
