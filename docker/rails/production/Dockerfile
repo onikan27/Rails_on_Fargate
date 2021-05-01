@@ -13,4 +13,5 @@ RUN bundle install
 ADD . /app
 EXPOSE 3000
 
-CMD ["/bin/sh", "-c", "bundle exec unicorn -p 3000 -c /app/config/unicorn.rb -E production"]
+# 起動させるために必要
+CMD ["/bin/sh", "-c", "bundle exec rails db:create && bundle exec unicorn -p 3000 -c /app/config/unicorn.rb -E production"]
